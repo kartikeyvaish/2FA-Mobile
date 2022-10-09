@@ -1,6 +1,6 @@
 // Packages Imports
 import { useContext, useState } from "react";
-import { View, StyleSheet, Keyboard } from "react-native";
+import { View, StyleSheet, Keyboard, StatusBar } from "react-native";
 import { Formik } from "formik";
 
 // Local Imports
@@ -63,9 +63,10 @@ function LoginEmailOTPScreen({ route }: AuthScreenProps<"LoginEmailOTPScreen">) 
               marginTop={20}
               onChangeText={handleChange("otp")}
               error={touched["otp"] ? errors.otp : undefined}
+              maxLength={6}
             />
 
-            <AppButton title="Verify OTP" onPress={handleSubmit} loading={Loading} disabled={Loading} />
+            <AppButton title="Verify OTP" onPress={handleSubmit} loading={Loading} disabled={Loading} marginTop={10} />
           </>
         )}
       </Formik>
@@ -83,7 +84,7 @@ const styles = StyleSheet.create({
     paddingLeft: 16,
     paddingRight: 16,
     backgroundColor: "white",
-    marginTop: 40,
+    paddingTop: StatusBar.currentHeight,
   },
   headingStyle: {
     fontSize: 25,

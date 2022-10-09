@@ -62,6 +62,7 @@ function LoginScreen({ navigation }: AuthScreenProps<"LoginScreen">) {
               marginTop={20}
               error={touched["email"] ? errors.email : undefined}
               onChangeText={handleChange("email")}
+              keyboardType="email-address"
             />
 
             <PasswordTextInput

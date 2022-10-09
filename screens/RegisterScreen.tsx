@@ -68,6 +68,7 @@ function RegisterScreen({ navigation }: AuthScreenProps<"RegisterScreen">) {
               placeholder="Email"
               error={touched["email"] ? errors.email : undefined}
               onChangeText={handleChange("email")}
+              keyboardType="email-address"
             />
 
             <PasswordTextInput
