@@ -2,6 +2,8 @@
 
 Mobile application with two-factor authentication setup.
 
+APK Link - https://drive.google.com/file/d/1giVHBYOKuQTR99rkCaXNzr5jmJQYeoch/view?usp=sharing
+
 ## Development Setup
 
 To set up 2FA Android Application for development, you need to follow the steps mentioned below:
